@@ -8,25 +8,34 @@
 
 const a1 = [4,8,91,10,13,5,31];
 const a2 = [3,19,39,10,5,33,8];
-
+const a3 = [];
 
 function differenceMaker(arr1,arr2) {
 
+    var answer;
 
+    if (arr1 === []) {
+        return arr1;
+    }
+    if (arr2 === []) { 
+        return arr2;
+    }
+    else {
     let mergedArr = arr1.concat(arr2);
     //console.log(mergedArr);
 
-    let answer = mergedArr.filter((i) => {
+        answer = mergedArr.filter((i) => {
         return mergedArr.indexOf(i) === mergedArr.lastIndexOf(i);
     });
 
     return answer;
 
-    
+}
 
      
     };
 
 
 
-console.log(differenceMaker(a1,a2));    
+//console.log(differenceMaker(a1,a2));    
+console.log(differenceMaker(a1,a3));
